@@ -110,12 +110,17 @@ while True:
         psg.theme("BlueMono")
         layout = [
                   [psg.Text("Esošās komponentes")],
-                  [psg.Text("Veids: " + values[0])],
-                  [psg.Text("Modelis: " + values[1])],
-                  [psg.Text("Cena: " + values[2])]
+                  [psg.Text("Veids: " + jauns.veids)],
+                  [psg.Text("Modelis: " + jauns.modelis)],
+                  [psg.Text("Cena: " + jauns.cena)],
+                  [psg.Button("Iziet")]
                   ]
-        window = psg.Window('',layout)
-        event,values = window.read()
+        window2 = psg.Window('',layout)
+        while True:
+            event,values = window2.read()
+            if event == "Iziet":
+                break 
+        window2.close()
     if event in (psg.WIN_CLOSED,'Aizvērt'):
         break
 
