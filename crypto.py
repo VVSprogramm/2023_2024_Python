@@ -2,7 +2,7 @@
 
 from cryptography.fernet import Fernet
 
-atslega = Fernet.generate_key()
+atslega = b'KWKyJGEq6oGsckVoNSl5UH5EBMvSPxqO_LMb0wkzsbs='
 
 print(atslega)
 
